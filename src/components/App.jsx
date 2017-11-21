@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import '../App.css';
 import { Form, FormControl, Button } from 'react-bootstrap';
+import { connect } from 'react-redux';
+// import { bindActionCreators } from 'redux';
+import { addReminder } from '../Actions';
 
 
 class App extends Component {
@@ -12,7 +15,7 @@ class App extends Component {
     }
 
     addReminder() {
-        console.log('this.state', this.state)
+        this.props.addReminder(this.state.text);
     }
     render() {
         return (
@@ -41,4 +44,8 @@ class App extends Component {
     }
 }
 
-export default App;
+// function mapDispatchToProps(dispatch) {
+//     return bindActionCreators({addReminder}, dispatch);
+// }
+
+export default connect(null, {addReminder})(App);
