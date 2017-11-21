@@ -7,7 +7,11 @@
 
 .title {
     text-align: center;
-    font-size: 26px;
+    font-size: 36px;
+    font-family: stencil;
+    font-weight: 600;
+    color: #f96302;
+    /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */
 }
 
 .form-control {
@@ -24,8 +28,6 @@
     display: inline-block;
 }
 
-
-
 .list-group {
     display: flex;
     flex-direction: column;
@@ -36,6 +38,7 @@ li.list-group-item {
     display: flex;
     width: 300px;
     justify-content: space-between;
+    margin-bottom: 3%;
 } 
 
 .icon {
