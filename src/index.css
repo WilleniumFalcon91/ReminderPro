@@ -24,7 +24,25 @@
     display: inline-block;
 }
 
-.delete-button {
-    float: right;
+
+
+.list-group {
+    display: flex;
+    flex-direction: column;
+}
+
+li.list-group-item {
+    align-items: center;
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+} 
+
+.icon {
+    margin-left: 5px;
+}
+
+button.list-item.delete-button.btn.btn-default {
     padding-left: 5px;
+    background-color: red;
 }

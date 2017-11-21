@@ -31,12 +31,14 @@ class App extends Component {
                         return (
                             <li key={reminder.id} className='list-group-item'>
                                 <div className="list-item">{reminder.text}</div>
-                                <div
+                                <Button
                                     className="list-item delete-button"
                                     onClick={() => this.deleteReminder(reminder.id)}
                                 >
+                                <div className='icon'>
                                     &#x2715;
                                 </div>
+                                </Button>
                             </li>
                         )
                     })
