@@ -6,4 +6,8 @@
 .btn {
     height: 34px;
     margin-left: 2%;
+    background-color: #f96302;
+    border-color: #f96302;
+    color: white;
+    
 }

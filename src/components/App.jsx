@@ -3,7 +3,7 @@ import '../App.css';
 import { Form, FormControl, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
-import { addReminder } from '../Actions';
+import { addReminder, deleteReminder } from '../Actions';
 
 
 class App extends Component {
@@ -18,15 +18,25 @@ class App extends Component {
         this.props.addReminder(this.state.text);
     }
 
+    deleteReminder(id) {
+        this.props.deleteReminder(id);
+    }
+
     renderReminders() {
         const { reminders } = this.props;
         return (
-            <ul className="list-group col-sm-4">
+            <ul className="list-group">
                 {
                     reminders.map(reminder => {
                         return (
                             <li key={reminder.id} className='list-group-item'>
-                                <div>{reminder.text}</div>
+                                <div className="list-item">{reminder.text}</div>
+                                <div
+                                    className="list-item delete-button"
+                                    onClick={() => this.deleteReminder(reminder.id)}
+                                >
+                                    &#x2715;
+                                </div>
                             </li>
                         )
                     })
@@ -39,7 +49,7 @@ class App extends Component {
         return (
             <div className="App">
                 <div className='title'>
-                    Reminder Pro
+                    Home Depot Reminder
                 </div>
                 <div className='form-inline reminder-form'>
                     <Form className="form-group">
@@ -75,4 +85,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, { addReminder })(App);
+export default connect(mapStateToProps, { addReminder, deleteReminder })(App);
