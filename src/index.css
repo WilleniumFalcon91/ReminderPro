@@ -1,0 +1,23 @@
+.App {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.title {
+    text-align: center;
+    font-size: 26px;
+}
+
+.form-control {
+    padding-right: 25px;
+} 
+
+.reminder-form {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}

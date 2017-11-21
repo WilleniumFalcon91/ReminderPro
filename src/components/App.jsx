@@ -41,7 +41,7 @@ class App extends Component {
                 <div className='title'>
                     Reminder Pro
                 </div>
-                <div className='form-inline'>
+                <div className='form-inline reminder-form'>
                     <Form className="form-group">
                         <FormControl
                             className='form-control'
@@ -49,9 +49,6 @@ class App extends Component {
                             onChange={event => this.setState({text: event.target.value})}
                         />
                     </Form>
-                    <div>
-                        {this.renderReminders()}
-                    </div>
                     <Button
                         type="button"
                         className='btn btn-success'
@@ -59,6 +56,9 @@ class App extends Component {
                     >
                     Add Reminder
                     </Button>
+                </div>
+                <div>
+                    {this.renderReminders()}
                 </div>
             </div>
         )
